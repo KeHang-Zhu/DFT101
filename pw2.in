@@ -1,0 +1,36 @@
+&control
+    calculation = 'vc-relax'
+    prefix = 'Ge'
+    outdir = '/home/bond/Work/Lab3/test'
+    pseudo_dir = '/home/bond/Software/qe-7.1/pseudo'
+    etot_conv_thr = 1e-5
+    forc_conv_thr = 1e-4
+/
+
+&system
+    ibrav=2, celldm(1) =14,
+    nat=2, 
+    ntyp=1,
+    ecutwfc=30
+/
+
+&electrons
+    conv_thr=1e-8
+/
+
+&ions
+/
+
+&cell
+    cell_dofree='ibrav'
+/
+
+ATOMIC_SPECIES
+  Ge 72.61 ge_lda_v1.4.uspp.F.UPF
+
+ATOMIC_POSITIONS {angstrom}
+  Ge 0.00000 0.00000 0.00000
+  Ge 1.25000 1.25000 1.25000
+
+K_POINTS (automatic)
+  4 4 4 1 1 1
